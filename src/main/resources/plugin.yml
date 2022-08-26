@@ -1,0 +1,7 @@
+name: CustomOres
+version: '${project.version}'
+main: net.david85258.customores.CustomOres
+api-version: 1.18
+load: POSTWORLD
+authors: [ david85258 ]
+description: hola
