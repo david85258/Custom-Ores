@@ -15,11 +15,13 @@ public class OrePopulator extends BlockPopulator {
         super.populate(worldInfo, random, x, z, limitedRegion);
         int X, Y, Z;
         for (int i = 1; i < 15; i++){
-            X = x * 16 + random.nextInt(16);
-            Z = z * 16 + random.nextInt(16);
-            Y = random.nextInt(103)-63;
-            if (limitedRegion.getType(X,Y,Z) == Material.STONE){
-                limitedRegion.setType(X,Y,Z,Material.CHEST);
+            if (random.nextInt(1000) < 5) {
+                X = x * 16 + random.nextInt(16);
+                Z = z * 16 + random.nextInt(16);
+                Y = random.nextInt(103)-63;
+                if (limitedRegion.getType(X,Y,Z) == Material.STONE){
+                    limitedRegion.setType(X,Y,Z,Material.CHEST);
+                }
             }
         }
     }
